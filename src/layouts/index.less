@@ -1,0 +1,221 @@
+.customLayout {
+  min-width: 1366px;
+  height: 100%;
+  overflow: hidden;
+
+  :global {
+    .layoutRight {
+      height: 100%;
+      overflow: hidden;
+      .pageTit {
+        padding: 5px 18px 4px;
+        background-color: var(--siderNavBg);
+        box-shadow: 0 1px 4px var(--manBoxShadow);
+      }
+    }
+
+    .mainHeader {
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      height: 42px;
+      padding: 0 16px;
+      line-height: 42px;
+      background: linear-gradient(
+        90deg,
+        rgba(13, 87, 170, 1) 0%,
+        rgba(13, 87, 170, 1) 0%,
+        rgba(22, 163, 207, 1) 100%,
+        rgba(22, 163, 207, 1) 100%
+      );
+      // border-bottom: 1px solid var(--borderColor);
+      // box-shadow: 0 2px 4px 0 #d3d3d3;
+      user-select: none;
+
+      .ant-menu {
+        flex-grow: 1;
+        height: 42px;
+      }
+
+      .trigger {
+        font-size: 20px;
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--activeFontColor);
+        }
+      }
+
+      .headerTitle {
+        flex-shrink: 0;
+        color: #0d57aa;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .vertical {
+        height: 1.5em;
+        margin-left: 20px;
+        background: #ccc;
+      }
+
+      .topMenuWrap {
+        display: flex;
+        flex-grow: 2;
+        align-items: center;
+        justify-content: space-between;
+
+        .logoInfo {
+          color: #ffffff;
+
+          .ant-divider {
+            height: 20px;
+            margin: 0 16px;
+            border-color: #ffffff;
+          }
+          .tit {
+            margin-left: 10px;
+            font-weight: 650;
+            font-size: 16px;
+            font-style: normal;
+          }
+          img {
+            width: 103px;
+            height: 21px;
+            margin-top: -5px;
+          }
+        }
+
+        .loginInfo {
+          .userBox {
+            padding: 2px;
+            color: #fff;
+            line-height: 1;
+            background-color: #5ab5d8;
+            border-radius: 100%;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .topMenuSkeleton {
+        margin-left: 20px;
+
+        li {
+          height: 24px;
+        }
+      }
+    }
+
+    .mainContent {
+      margin: 8px;
+      overflow: auto;
+      background-color: var(--mainBgColor);
+    }
+
+    .siderNav {
+      height: 100%;
+      overflow: hidden;
+      background-color: var(--siderNavBg);
+      box-shadow: 1px 0 4px var(--manBoxShadow);
+
+      .sideMenuContent {
+        .icon {
+          font-size: 18px;
+        }
+        .ant-menu-item-selected::after {
+          display: none;
+        }
+        .ant-menu-item {
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-left: 16px !important;
+          .iconfont {
+            margin-right: 8px;
+          }
+        }
+      }
+
+      .siderNavTop {
+        padding: 5px 4px 4px;
+        border-bottom: 1px solid var(--border-color);
+
+        .trigger {
+          color: var(--icon-color);
+          font-size: 14px;
+          cursor: pointer;
+          transition: color 0.3s;
+          &:hover {
+            color: var(--activeFontColor);
+          }
+        }
+      }
+      .leftMenuBox {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+      }
+
+      .menuGroup {
+        width: 100%;
+        height: 1px;
+        margin-bottom: 8px;
+        background-color: #3972b3;
+      }
+
+      .leftSideSkeleton {
+        padding: 14px;
+
+        li {
+          height: 24px;
+        }
+      }
+
+      .ant-menu {
+        color: var(--sideNavFontColor);
+        background-color: transparent;
+        border-right: none;
+
+        a,
+        .ant-menu-submenu-arrow {
+          color: var(--sideNavFontColor);
+        }
+      }
+
+      .ant-menu-submenu-title:hover,
+      .ant-menu-submenu-selected {
+        color: var(--sideNavFontColor);
+      }
+
+      .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background-color: var(--primary-color);
+        content: '';
+      }
+      .ant-layout-sider-collapsed {
+        .ant-menu-item-selected {
+        }
+      }
+    }
+
+    .contentSkeleton {
+      height: 100%;
+      padding: 20px;
+      background-color: var(--pageBgColor);
+
+      .ant-skeleton-title {
+        height: 24px;
+      }
+
+      li {
+        height: 24px;
+      }
+    }
+  }
+}
